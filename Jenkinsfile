@@ -28,7 +28,7 @@ pipeline {
         stage('build image') {
             steps {
                 script {
-                    
+
                    echo 'building docker image...'
                    buildImage(env.IMAGE_NAME)
                    dockerLogin()
@@ -42,7 +42,7 @@ pipeline {
                    echo 'deploying docker image to EC2...'
 
                    def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME}"
-                   def ec2Instance = "ec2-user@35.180.251.121"
+                   def ec2Instance = "ec2-user@3.12.85.236"
 
                    sshagent(['ec2-server-key']) {
                        sh "scp -o StrictHostKeyChecking=no server-cmds.sh ${ec2Instance}:/home/ec2-user"
