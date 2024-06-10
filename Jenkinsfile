@@ -15,6 +15,7 @@ pipeline {
     // environment {
     //     IMAGE_NAME = 'weridcoder/my-repo:java-maven-2.0.0'
     // }
+    
     stages {
         stage("increment version") {
             steps {
