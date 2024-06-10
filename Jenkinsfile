@@ -13,7 +13,7 @@ pipeline {
         maven 'Maven'
     }
     environment {
-        IMAGE_NAME = 'nanajanashia/demo-app:java-maven-2.0'
+        IMAGE_NAME = 'weridcoder/my-repo:java-maven-2.0.0'
     }
     stages {
         stage('build app') {
